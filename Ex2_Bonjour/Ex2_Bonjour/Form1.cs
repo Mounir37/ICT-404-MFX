@@ -51,5 +51,15 @@ namespace Ex2_Bonjour
         {
 
         }
+
+        private void Btn_quitter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

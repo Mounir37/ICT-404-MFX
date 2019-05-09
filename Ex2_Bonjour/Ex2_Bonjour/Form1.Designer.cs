@@ -33,7 +33,7 @@
             this.TxtB_Nom = new System.Windows.Forms.TextBox();
             this.Btn_bienvenue = new System.Windows.Forms.Button();
             this.Lbl_Bjr_ = new System.Windows.Forms.Label();
-            this.Btn_quitter = new System.Windows.Forms.Button();
+            this.cmd_Quitter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_Nom
@@ -78,15 +78,16 @@
             this.Lbl_Bjr_.Text = "...";
             this.Lbl_Bjr_.Click += new System.EventHandler(this.Lbl_Bjr__Click);
             // 
-            // Btn_quitter
+            // cmd_Quitter
             // 
-            this.Btn_quitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Btn_quitter.Image = ((System.Drawing.Image)(resources.GetObject("Btn_quitter.Image")));
-            this.Btn_quitter.Location = new System.Drawing.Point(632, 290);
-            this.Btn_quitter.Name = "Btn_quitter";
-            this.Btn_quitter.Size = new System.Drawing.Size(99, 92);
-            this.Btn_quitter.TabIndex = 4;
-            this.Btn_quitter.UseVisualStyleBackColor = true;
+            this.cmd_Quitter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cmd_Quitter.BackgroundImage")));
+            this.cmd_Quitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.cmd_Quitter.Location = new System.Drawing.Point(626, 300);
+            this.cmd_Quitter.Name = "cmd_Quitter";
+            this.cmd_Quitter.Size = new System.Drawing.Size(92, 92);
+            this.cmd_Quitter.TabIndex = 4;
+            this.cmd_Quitter.UseVisualStyleBackColor = true;
+            this.cmd_Quitter.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
@@ -94,7 +95,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Btn_quitter);
+            this.Controls.Add(this.cmd_Quitter);
             this.Controls.Add(this.Lbl_Bjr_);
             this.Controls.Add(this.Btn_bienvenue);
             this.Controls.Add(this.TxtB_Nom);
@@ -113,7 +114,7 @@
         private System.Windows.Forms.TextBox TxtB_Nom;
         private System.Windows.Forms.Button Btn_bienvenue;
         private System.Windows.Forms.Label Lbl_Bjr_;
-        private System.Windows.Forms.Button Btn_quitter;
+        private System.Windows.Forms.Button cmd_Quitter;
     }
 }
 
