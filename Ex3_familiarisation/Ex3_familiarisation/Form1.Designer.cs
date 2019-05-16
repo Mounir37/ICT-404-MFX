@@ -117,6 +117,7 @@
             this.ChBox_Rabais.TabIndex = 7;
             this.ChBox_Rabais.Text = "Rabais fidélité (%)";
             this.ChBox_Rabais.UseVisualStyleBackColor = true;
+            this.ChBox_Rabais.CheckedChanged += new System.EventHandler(this.ChBox_Rabais_CheckedChanged);
             // 
             // textBox1
             // 
