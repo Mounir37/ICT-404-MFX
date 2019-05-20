@@ -30,7 +30,9 @@ namespace Ex3_familiarisation
             float brut;
             float famillial;
             float fidel;
-            if (!float.TryParse(textBox1.Text,out famillial))
+            float transport = 0;
+            float jeune = 0;
+            if (!float.TryParse(textBox1.Text, out famillial))
             {
                 MessageBox.Show("Entrez un chiffre SVP");
                 textBox1.Focus();
@@ -42,8 +44,8 @@ namespace Ex3_familiarisation
                 textBox2.Focus();
                 return;
             }
-            float total = famillial/brut;
-            Lbl_revnue_imposable.Text = "Revenue Imposable : " + total.ToString();
+            float total = famillial / brut;
+
             if (ChBox_Rabais.Checked == true)
             {
                 if (!float.TryParse(textBox5.Text, out fidel))
@@ -52,9 +54,34 @@ namespace Ex3_familiarisation
                     textBox5.Focus();
                     return;
                 }
-                fidel = (total / 100) * fidel; //problème a vérifier
+                fidel = total - (total / 100) * fidel;
+                total = fidel;
+            }
+                
+                
+            if (ChBox_Transport.Checked == true)
+            {
+                if (!float.TryParse(textBox4.Text, out transport))
+                {
+                    MessageBox.Show("Entrez un chiffre SVP");
+                    textBox4.Focus();
+                    return;
+                }
+                total = total - transport;                                
             }
 
+            if (ChBox_Jeune.Checked == true)
+            {
+                if (!float.TryParse(textBox3.Text, out jeune))
+                {
+                    MessageBox.Show("Entrez un chiffre SVP");
+                    textBox3.Focus();
+                    return;
+                }
+                total = total - jeune;
+            }
+
+            Lbl_revnue_imposable.Text = "Revenue Imposable : " + total.ToString();
         }
 
         private void ChBox_Rabais_CheckedChanged(object sender, EventArgs e)
@@ -70,6 +97,39 @@ namespace Ex3_familiarisation
                 textBox5.Enabled = true;
 
             }
+        }
+        private void ChBox_Transport_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (ChBox_Transport.Checked == false)
+            {
+                textBox4.Enabled = false;
+
+            }
+            if (ChBox_Transport.Checked == true)
+            {
+                textBox4.Enabled = true;
+
+            }
+        }
+        private void ChBox_Jeune_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (ChBox_Jeune.Checked == false)
+            {
+                textBox3.Enabled = false;
+
+            }
+            if (ChBox_Jeune.Checked == true)
+            {
+                textBox3.Enabled = true;
+
+            }
+        }
+
+        private void Lbl_revnue_imposable_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
