@@ -41,5 +41,10 @@ namespace Ex4_Commande_pizza
         {
 
         }
+
+        private void Form_Pizza_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
