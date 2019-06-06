@@ -12,6 +12,8 @@ namespace Ex4_Commande_pizza
 {
     public partial class Form_Pizza : Form
     {
+
+
         public Form_Pizza()
         {
             InitializeComponent();
@@ -29,20 +31,32 @@ namespace Ex4_Commande_pizza
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string pate;
+            string garniture;
 
+            if (RadBtn_ExFine.Checked == true)
+            {
+                pate = RadBtn_ExFine.Text;
+                lbl_ContenuCommande.Text = "Commande pour la table " + TxtB_table.Text + ", une pâte " + pate; // pas fini
+            }
+            if (RadBtn_fine.Checked == true)
+            {
+                pate = RadBtn_fine.Text;
+                lbl_ContenuCommande.Text = "Commande pour la table " + TxtB_table.Text + ", une pâte " + pate; // pas fini
+            }
+            if (RadBtn_Normal.Checked == true)
+            {
+                pate = RadBtn_Normal.Text;
+                lbl_ContenuCommande.Text = "Commande pour la table " + TxtB_table.Text + ", une pâte " + pate; // pas fini
+            }
+            if (RadBtn_Epaisse.Checked == true)
+            {
+                pate = RadBtn_Epaisse.Text;
+                lbl_ContenuCommande.Text = "Commande pour la table " + TxtB_table.Text + ", une pâte " + pate; // pas fini
+            }
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form_Pizza_Load(object sender, EventArgs e)
+        private void RadBtn_ExFine_CheckedChanged(object sender, EventArgs e)
         {
 
         }

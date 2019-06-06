@@ -41,7 +41,7 @@
             this.ChBox_Crevettes = new System.Windows.Forms.CheckBox();
             this.Cmd_commander = new System.Windows.Forms.Button();
             this.lbl_commande = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_ContenuCommande = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TxtB_table
@@ -72,6 +72,7 @@
             this.RadBtn_ExFine.TabStop = true;
             this.RadBtn_ExFine.Text = "Extra-fine";
             this.RadBtn_ExFine.UseVisualStyleBackColor = true;
+            this.RadBtn_ExFine.CheckedChanged += new System.EventHandler(this.RadBtn_ExFine_CheckedChanged);
             // 
             // RadBtn_fine
             // 
@@ -108,7 +109,7 @@
             // 
             // GBox_pate
             // 
-            this.GBox_pate.Location = new System.Drawing.Point(16, 78);
+            this.GBox_pate.Location = new System.Drawing.Point(16, 81);
             this.GBox_pate.Name = "GBox_pate";
             this.GBox_pate.Size = new System.Drawing.Size(135, 140);
             this.GBox_pate.TabIndex = 6;
@@ -174,27 +175,25 @@
             this.lbl_commande.Size = new System.Drawing.Size(60, 13);
             this.lbl_commande.TabIndex = 12;
             this.lbl_commande.Text = "Commande";
-            this.lbl_commande.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // label1
+            // lbl_ContenuCommande
             // 
-            this.label1.BackColor = System.Drawing.Color.Yellow;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 294);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(340, 84);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
+            this.lbl_ContenuCommande.BackColor = System.Drawing.Color.Yellow;
+            this.lbl_ContenuCommande.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbl_ContenuCommande.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_ContenuCommande.Location = new System.Drawing.Point(13, 294);
+            this.lbl_ContenuCommande.Name = "lbl_ContenuCommande";
+            this.lbl_ContenuCommande.Size = new System.Drawing.Size(340, 84);
+            this.lbl_ContenuCommande.TabIndex = 13;
+            this.lbl_ContenuCommande.Text = "...";
+            this.lbl_ContenuCommande.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Form_Pizza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 387);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_ContenuCommande);
             this.Controls.Add(this.lbl_commande);
             this.Controls.Add(this.Cmd_commander);
             this.Controls.Add(this.ChBox_Crevettes);
@@ -210,7 +209,6 @@
             this.Controls.Add(this.GBox_pate);
             this.Name = "Form_Pizza";
             this.Text = "Pizza";
-            this.Load += new System.EventHandler(this.Form_Pizza_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +229,7 @@
         private System.Windows.Forms.CheckBox ChBox_Crevettes;
         private System.Windows.Forms.Button Cmd_commander;
         private System.Windows.Forms.Label lbl_commande;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_ContenuCommande;
     }
 }
 
