@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{37D346F9-B3A3-48D0-8768-D4F508810B41}</ProjectGuid>
+    <ProjectGuid>{F5EDB78D-0DF6-4898-B26A-6BE9559E0C3A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Ex6_Traban</RootNamespace>
-    <AssemblyName>Ex6_Traban</AssemblyName>
+    <RootNamespace>Ex7_formative</RootNamespace>
+    <AssemblyName>Ex7_formative</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,9 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
